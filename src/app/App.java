@@ -33,13 +33,8 @@ public class App {
 		boolean isThereRemainder = true;
 		int divider = 2;
 		
-		while (isThereRemainder && divider < number) {
-			
-			isThereRemainder = (number % divider !=0);
-			
-			divider++;
-		}
-		return isThereRemainder;
+		while (number % divider !=0 && divider++ < number);
+		return divider == number;
 	}
 	
 }
